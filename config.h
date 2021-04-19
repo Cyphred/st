@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Noto Sans Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Noto sans mono:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -94,36 +94,37 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#111111",
-	"#ff9da4",
-	"#d1f1a9",
-	"#ffeead",
-	"#80baff",
-	"#ebbbff",
-	"#99ffff",
-	"#858585",
+	"#4a4131",
+	"#cb712a",
+	"#cc7c34",
+	"#c38e45",
+	"#767b6f",
+	"#9fafaf",
+	"#86a3a4",
+	"#cad7ca",
 
 	/* 8 bright colors */
-	"#333333",
-	"#ff7882",
-	"#b8f171",
-	"#ffe580",
-	"#80baff",
-	"#d778ff",
-	"#61ffff",
-	"#ffffff",
+	"#4b4131",
+	"#cb712a",
+	"#cc7c34",
+	"#c38e45",
+	"#767b6f",
+	"#abbcbc",
+	"#87a4a5",
+	"#cad7ca",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
 	"#555555",
-	"#002252",
+	"#181818",
+	"#cad7ca",
 };
 
 
@@ -131,7 +132,7 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
+unsigned int defaultfg = 259;
 unsigned int defaultbg = 258;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
