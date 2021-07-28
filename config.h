@@ -94,47 +94,43 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 0.95;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+
 	/* 8 normal colors */
-	"#4a4131",
-	"#cb712a",
-	"#cc7c34",
-	"#c38e45",
-	"#767b6f",
-	"#9fafaf",
-	"#86a3a4",
-	"#cad7ca",
+	[0] = "#032c36", /* black   */
+	[1] = "#c2454e", /* red     */
+	[2] = "#7cbf9e", /* green   */
+	[3] = "#8a7a63", /* yellow  */
+	[4] = "#2e3340", /* blue    */
+	[5] = "#ff5879", /* magenta */
+	[6] = "#44b5b1", /* cyan    */
+	[7] = "#f2f1b9", /* white   */
 
 	/* 8 bright colors */
-	"#4b4131",
-	"#cb712a",
-	"#cc7c34",
-	"#c38e45",
-	"#767b6f",
-	"#abbcbc",
-	"#87a4a5",
-	"#cad7ca",
+	[8]  = "#065f73", /* black   */
+	[9]  = "#ef5847", /* red     */
+	[10] = "#a2d9b1", /* green   */
+	[11] = "#beb090", /* yellow  */
+	[12] = "#61778d", /* blue    */
+	[13] = "#ff99a1", /* magenta */
+	[14] = "#9ed9d8", /* cyan    */
+	[15] = "#f6f6c9", /* white   */
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"#181818",
-	"#cad7ca",
+	/* special colors */
+	[256] = "#021b21", /* background */
+	[257] = "#e8dfd6", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -476,6 +472,6 @@ static uint selmasks[] = {
  * of single wide characters.
  */
 static char ascii_printable[] =
-	" !\"#$%&'()*+,-./0123456789:;<=>?"
-	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
-	"`abcdefghijklmnopqrstuvwxyz{|}~";
+" !\"#$%&'()*+,-./0123456789:;<=>?"
+"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
+"`abcdefghijklmnopqrstuvwxyz{|}~";
